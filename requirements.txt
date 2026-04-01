@@ -1,0 +1,18 @@
+# Core ML libraries
+numpy
+scipy
+pandas
+
+# PyTorch 
+torch
+torchaudio
+torchvision
+
+# Transformers / embeddings
+transformers
+tokenizers
+sentence-transformers
+safetensors
+
+# Logging
+tensorboard

@@ -1,0 +1,14 @@
+{
+    "n_epochs": 100,
+    "batch_size": 1024,
+    "lr": 3e-4,
+    "num_heads": 4,
+    "dropout_rate": 0.1, 
+    "B": 4,
+    "N": 16,
+    "pooling": "attention",
+    "temperature": 0.07,
+    "neutral_ratio": 0.8,
+    "eval_Ks": [10, 25, 50],
+    "eval_every": 5
+}

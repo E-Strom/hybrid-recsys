@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+*.pyo
+*.pyd
+
+
+# Data (keep raw optional)
+data/
+
+#RecVAE
+RecVAE/
+
+
+# Experiments / outputs
+experiments/
+runs/
+scripts/
+src/attentionrec/runs_pytorch/
+checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
