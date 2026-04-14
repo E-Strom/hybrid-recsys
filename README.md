@@ -20,16 +20,9 @@ representation space where users, items, and queries can interact.
 
 Traditional recommender systems rely on static user embeddings that fail to capture the dynamic, contextual relationships between the items a user has watched. 
 
-
 This project models users as sets of interacted items and learns a dynamic user representation using a Transformer. The model is trained with a contrastive objective, pulling the generated user representation closer to positive items and pushing it away from negatives in the shared embedding space.
 
 Beyond standard history-based recommendations, since the item embeddings are derived from a pre-trained sentence transformer (stsb-roberta-large), we can inject arbitrary text prompts directly into the user representation.
-
-### How it works:
-1. A user’s history of anime is pulled and converted into a sequence of precomputed description embeddings.
-2. A natural language prompt (e.g., *"Magical girl anime"*) is passed through the same transformer.
-3. The prompt embedding lives in the same semantic space and is appended to the sequence of item embeddings.
-4. The Transformer jointly attends over both historical items and the prompt, producing a context-aware user representation conditioned on the query.
 
 A natural extension is to incorporate multimodal embeddings (e.g., CLIP), enabling the model to capture visual style and aesthetic features alongside textual semantics.
 
@@ -52,11 +45,11 @@ Where:
 * $u$ is the user representation.
 * $pos$ is the positive item embedding.
 * $i$ iterates over both the positive and all negative sampled items.
-* $\tau$ is the temperature hyperparameter (default: 0.07).
+* $\tau$ is the temperature hyperparameter.
 
 ## Notebooks and Inference
 
-The repository includes detailed Jupyter notebooks modeling the entire pipeline:
+The repository includes Jupyter notebooks:
 * **`recVAE_example.ipynb`**: Demonstrates the baseline variational autoencoder used for candidate retrieval.
 * **`attentionrec_example.ipynb`**: Demonstrates loading the trained Transformer, generating synthetic user archetypes, and performing prompt-based augmented user embedding inference.
 
